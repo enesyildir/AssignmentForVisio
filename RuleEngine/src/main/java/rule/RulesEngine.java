@@ -46,6 +46,14 @@ public class RulesEngine {
                      System.out.println("Triggered rule ----- " + rule.getRuleId());
                  }
 
+                // trigger state rule, decide if a person eligible to apply for a product due to age restriction.
+
+                if (decideOnAgeQualification(rule, person)) {
+                    product.setDisqualified(true);
+                    System.out.println("Triggered rule ----- " + rule.getRuleId());
+                 }
+
+
           });
 
 
@@ -61,6 +69,15 @@ public class RulesEngine {
         }
     }
 
+    public static boolean decideOnAgeQualification(Rule rule, Person person) {
+        boolean flag = false;
+        if ((rule.getAgeLimitLowerBond() != 0) && rule.getAgeLimitLowerBond() > person.getAge() ||
+                ((rule.getAgeLimitLowerBond() != 0) && (person.getAge() > rule.getAgeLimitUpperBond()))) {
+            return flag = true;
+        }else {
+            return false;
+        }
 
+    }
 
 }

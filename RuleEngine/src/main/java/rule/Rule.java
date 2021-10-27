@@ -7,17 +7,13 @@ public class Rule {
     public double interestRate;
     public String interestRateDecision;
     public String ruleId;
-
-    public String getProductType() {
-        return productType;
-    }
-
-    public void setProductType(String productType) {
-        this.productType = productType;
-    }
-
     public String productType;
+    public int ageLimitLowerBond;
+    public int ageLimitUpperBond;
 
+    public String getProductType() { return productType; }
+
+    public void setProductType(String productType) { this.productType = productType; }
 
     public String getState() {
         return state;
@@ -65,8 +61,15 @@ public class Rule {
         return interestRateDecision;
     }
 
-    public void setInterestRateDecision(String interestRateDecision) {
-        this.interestRateDecision = interestRateDecision;
-    }
+    public void setInterestRateDecision(String interestRateDecision) { this.interestRateDecision = interestRateDecision; }
+
+    public int getAgeLimitLowerBond() { return ageLimitLowerBond; }
+
+    public void setAgeLimitLowerBond(int ageLimitLowerBond) { this.ageLimitLowerBond = ageLimitLowerBond; }
+
+    public int getAgeLimitUpperBond() { return ageLimitUpperBond; }
+
+    public void setAgeLimitUpperBond(int ageLimitUpperBond) { this.ageLimitUpperBond = ageLimitUpperBond; }
+
 
 }

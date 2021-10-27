@@ -25,6 +25,12 @@
             "interestRate":0.5,
             "interestRateDecision": "Add"
 
+        },
+        {
+            "ruleId": 5,
+            "ageLimitLowerBond": 25,
+            "ageLimitUpperBond": 65
+
         }
 
     ]
