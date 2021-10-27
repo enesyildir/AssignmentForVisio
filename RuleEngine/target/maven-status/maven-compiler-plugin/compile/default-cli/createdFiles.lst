@@ -1,0 +1,4 @@
+domain\Person.class
+rule\RulesEngine.class
+rule\Rule.class
+domain\Product.class
